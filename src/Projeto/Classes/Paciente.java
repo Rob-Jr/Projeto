@@ -1,5 +1,4 @@
-package Projeto;
-import java.util.Scanner;
+package Projeto.Classes;
 
 public class Paciente {
     private String nome;
@@ -12,7 +11,11 @@ public class Paciente {
     private String bairro;
     private String complemento;
     private int numCas;
-    
+   
+    public Paciente(){
+
+    }
+
     public Paciente(String nome, long cpf, int idade, int dataNas, String email, long telefone, String rua, int numCas, String complemento, String bairro){
         this.nome = nome;
         this.cpf = cpf;
@@ -26,54 +29,7 @@ public class Paciente {
         this.bairro = bairro;
    
     }
-   
-    public void cadastrar(){
     
-        Scanner leitor = new Scanner(System.in); 
-    
-        System.out.println("Digite o nome: ");
-        String nome = leitor.nextLine();
-        this.setNome(nome);
-
-        System.out.println("Digite o email: ");
-        String email = leitor.nextLine();
-        this.setEmail(email);
-        
-        System.out.println("Digite o rua: ");
-        String rua = leitor.nextLine();
-        this.setRua(rua);
-
-        System.out.println("Digite o complemento: ");
-        String complemento = leitor.nextLine();
-        this.setComplemento(complemento);
-
-        System.out.println("Digite o bairro: ");
-        String bairro = leitor.nextLine();
-        this.setBairro(bairro); 
-        
-        System.out.println("Digite o número da residencia: ");
-        int numCas = leitor.nextInt();
-        this.setNumCas(numCas);
-
-        System.out.println("Digite o CPF: ");
-        long cpf = leitor.nextLong();
-        this.setCpf(cpf);
-
-        System.out.println("Digite a idade: ");
-        int idade = leitor.nextInt();
-        this.setIdade(idade);
-
-        System.out.println("Digite a data de nascimento (apenas números): ");
-        int dataNas = leitor.nextInt();
-        this.setDataNas(dataNas);
-
-        System.out.println("Digite o telefone (apenas números): ");
-        long telefone = leitor.nextLong();
-        this.setTelefone(telefone);
-
-        leitor.close();
-    }
-   
 
     public int getNumCas() {
         return numCas;
