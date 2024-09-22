@@ -93,6 +93,16 @@ public class RepPaciente {
 
   }
 
+  public void deletar (Scanner leitor){
+    System.out.println("Qual paciente deseja excluir?");
+    cambada.forEach((n) -> {System.out.println(n.getNome());});
+    int i = leitor.nextInt();
+    leitor.nextLine();
+    cambada.remove(i - 1);
+    System.out.println("Paciente excluido!");
+
+  }
+  
   public void imprimir() {
     int i = 1;
     for (Paciente paciente : this.cambada) {
